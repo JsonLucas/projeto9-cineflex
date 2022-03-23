@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    height: 50px;
+    width: 100%;
+    background-color: rgb(195, 207, 217);
+}
+.name-header{
+    color: rgb(232, 131, 58);
+    font-size: 30px;
+    width: 140px;
+    padding-top: 10px;
+    margin: auto;
+}
+.subtitle{
+    width: 250px;
+    margin: auto;
+    box-sizing: border-box;
+}
+.subtitle > p{
+    padding: 40px;
+    font-size: 20px;
+}
+.container-movies{
+    width: 90%;
+    margin-left: 10%;
+    justify-content: space-around;
+}
+.single-movie{
+    box-sizing: border-box;
+    float: left;
+    width: 170px;
+    height: 300px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+}
+.movie-thumb > img{
+    width: 100%;
+    height: 100%;
+}

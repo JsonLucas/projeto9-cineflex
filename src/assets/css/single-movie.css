@@ -1,0 +1,48 @@
+.container-sessions{
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.session-weekday{
+    display: inline-flex;
+    padding-bottom: 10px;
+}
+.session-weekday > p{
+    padding-right: 20px;
+}
+.session-showtime{
+    padding-bottom: 10px;
+    display: flex;
+}
+.showtimes{
+    float: left;
+    padding-right: 5px;
+}
+.btn-showtime{
+    border: none;
+    border-radius: 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(232, 131, 58);
+    color: white;
+}
+.footer{
+    box-sizing: border-box;
+    padding: 5px;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: rgb(223, 230, 237);
+}
+.sample-single-movie{
+    display: flex;
+}
+.sample-movie-thumb{
+    box-sizing: border-box;
+    float: left;
+    width: 60px;
+    height: 90%;
+    padding: 7px;
+    background-color: white;
+}

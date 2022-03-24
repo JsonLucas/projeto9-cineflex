@@ -1,0 +1,38 @@
+.single-seat{
+    box-sizing: border-box;
+    padding: 4px;
+    float: left;
+}
+.seat{
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 13px;
+}
+.selected-seat{
+    background-color: rgb(141, 215, 207);
+}
+.available-seat{
+    background-color: rgb(195, 207, 217);
+}
+.unavailable-seat{
+    background-color: rgb(251, 225, 146);
+}
+.seats-subtitle{
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+}
+.seat-demo{
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin: auto;
+}
+.container-seats{
+    box-sizing: border-box;
+    width: 90%;
+    margin: auto;
+    justify-content: space-around;
+}

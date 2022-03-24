@@ -1,4 +1,4 @@
-import axiosConfig from '../utils/axios-config';
+import axiosConfig from './axios-config';
 import { Fragment, useEffect } from "react";
 export function GetMovies({setData}){
     useEffect(() => {

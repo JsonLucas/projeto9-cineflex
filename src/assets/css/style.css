@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 *{
     margin: 0;
     padding: 0;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+a{
+    text-decoration: none;
 }
 .header{
     height: 50px;
@@ -15,7 +22,7 @@
     margin: auto;
 }
 .subtitle{
-    width: 250px;
+    width: 300px;
     margin: auto;
     box-sizing: border-box;
 }

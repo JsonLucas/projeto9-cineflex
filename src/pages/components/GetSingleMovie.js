@@ -1,20 +1,21 @@
 import { Fragment, useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import MovieShowtimes from '../MovieShowtimes';
-import axiosConfig from '../../utils/axios-config';
-function GetSingleMovie({movieId}){
-    const [singleMovieData, setSingleMovieData] = useState();
+import GetMovieData from '../../utils/GetMovieData';
+import Loading from '../Loading';
+
+function GetSingleMovie(){
+    const { movieId } = useParams();
+    const [singleMovieData, setSingleMovieData] = useState({});
+    const [loaded, setLoaded] = useState(false);
     useEffect(() => {
-        const request = axiosConfig.get(`/movies/${movieId}/showtimes`);
-        request.then((response) => {
-            setSingleMovieData(response.data);
-            console.log(response.data);
-        }).catch((error) => {
-            console.log(error);
-        });
+        const url = `/movies/${movieId}/showtimes`;
+        GetMovieData(url, setSingleMovieData, setLoaded);
     }, []);
     return (
         <Fragment>
-            <MovieShowtimes movieData={singleMovieData} />
+            {!loaded && <Loading />}
+            {loaded && <MovieShowtimes movieData={singleMovieData} />}
         </Fragment>
     );
 }

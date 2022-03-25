@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 20px;
 }
 .session-weekday{
     display: inline-flex;
@@ -45,4 +46,8 @@
     height: 90%;
     padding: 7px;
     background-color: white;
+}
+.sample-movie-information{
+    box-sizing: border-box;
+    padding: 10px;
 }

@@ -4,6 +4,7 @@ import AppRoutes from './AppRoutes';
 import './assets/css/style.css';
 import './assets/css/single-movie.css';
 import './assets/css/seats.css';
+import './assets/css/finalize-request.css';
 function App() {
   const [data, setData] = useState();
   return (

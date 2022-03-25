@@ -8,6 +8,19 @@ function GetSingleMovie(){
     const { movieId } = useParams();
     const [singleMovieData, setSingleMovieData] = useState({});
     const [loaded, setLoaded] = useState(false);
+    const body = {
+        movieData: {
+            movieName: singleMovieData.title,
+            moviePosterUrl: singleMovieData.posterURL,
+            movieSession: '',
+            movieSeats: []
+        },
+        buyerData: {
+            buyerName: '',
+            buyerCpf: ''
+        }
+    };
+    localStorage.setItem('requestData', JSON.stringify(body));
     useEffect(() => {
         const url = `/movies/${movieId}/showtimes`;
         GetMovieData(url, setSingleMovieData, setLoaded);

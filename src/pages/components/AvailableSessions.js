@@ -1,17 +1,26 @@
+import { findDOMNode } from "react-dom";
 import { Link } from "react-router-dom";
 function AvailableSessions({movieData}) {
+    function setSessionDay(e){
+        const body = JSON.parse(localStorage.getItem('requestData'));
+        body.movieData.movieSession = findDOMNode(e.target).value;
+        localStorage.setItem('requestData', JSON.stringify(body));
+    }
     return (
     <div className='container-sessions'>
-        {movieData.days?.map((item, i) => (
+        {movieData.days?.map((itemDays, i) => (
             <div className='single-session'>
                 <div className='session-weekday'>
-                    <p>{item.weekday} - {item.date}</p>
+                    <p>{itemDays.weekday} - {itemDays.date}</p>
                 </div>
                 <div className='session-showtime'>
-                    {movieData.days[i].showtimes?.map((item, j) => (
+                    {movieData.days[i].showtimes?.map((itemShowtime, j) => (
                         <div className='showtimes'>
                             <Link to={`/assentos/${movieData.days[i].showtimes[j].id}`}>
-                                <button className='btn-showtime'>{item.name}</button>
+                                <button value={`${itemDays.date} ${itemShowtime.name}`} className='btn-showtime' 
+                                onClick={setSessionDay}>
+                                    {itemShowtime.name}
+                                </button>
                             </Link>
                         </div>
                     ))}

@@ -1,14 +1,33 @@
-import { Fragment } from 'react';
-function SingleSeat({seatsData}){
+import { useEffect } from 'react';
+import { findDOMNode } from 'react-dom';
+import SeatSubtitle from './SeatSubtitle';
+function SingleSeat({selectedSeats, seatsData, setSelectedSeat}){
+    function selectSeat(e){
+        const keySeat = parseInt(findDOMNode(e.target).id);
+        const singleSeat = findDOMNode(e.target);
+        if(singleSeat.classList.contains('available-seat')){
+            singleSeat.classList.remove('available-seat');
+            singleSeat.classList.add('selected-seat');
+            setSelectedSeat([...selectedSeats, keySeat]);
+        }else if(singleSeat.classList.contains('selected-seat')){
+            singleSeat.classList.remove('selected-seat');
+            singleSeat.classList.add('available-seat');
+            setSelectedSeat([...selectedSeats.splice(selectedSeats.indexOf(keySeat), 1)]);
+        }
+        console.log(selectedSeats);
+    }
+    let itemClass;
     return (
-        <Fragment>
-            {seatsData.seats.map((item) => (
+        <div className='container-seats'>
+            {seatsData.seats.map((item) => {
+                itemClass = item.isAvailable ? 'available-seat' : 'unavailable-seat';
+                return (
                 <div className='single-seat'>
-                    {item.isAvailable && <div className='seat available-seat'>{item.name}</div>}
-                    {!item.isAvailable && <div className='seat unavailable-seat'>{item.name}</div>}                    
+                    <div className={`seat ${itemClass}`} onClick={selectSeat} id={item.id}>{item.name}</div>                    
                 </div>
-            ))}
-        </Fragment>
+            )})}
+            <SeatSubtitle />
+        </div>
     );
 }
 

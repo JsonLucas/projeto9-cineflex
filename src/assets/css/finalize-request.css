@@ -1,0 +1,33 @@
+.finalize-subtitle{
+    width: 280px;
+    margin: auto;
+    box-sizing: border-box;
+}
+.finalize-subtitle > p{
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: green;
+}
+.container-finalize-request{
+    width: 90%;
+    margin: auto;
+}
+.row-information{
+    padding-top: 20px;
+}
+.subtitle-ticket{
+    font-weight: bold;
+}
+.session-information{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.back-home{
+    margin: auto;
+    width: 150px;
+    padding-top: 40px;
+}
+.back-home > button{
+    width: 100%;
+}

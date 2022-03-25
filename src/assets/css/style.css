@@ -9,6 +9,9 @@ body{
 a{
     text-decoration: none;
 }
+button, .seat{
+    cursor: pointer;
+}
 .header{
     height: 50px;
     width: 100%;

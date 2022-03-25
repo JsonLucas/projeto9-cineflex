@@ -1,7 +1,7 @@
 function Header(){
     return (
         <header className='header'>
-            <div className='name-header'><p>CINEFLIX</p></div>
+            <div className='name-header'><p>CINEFLEX</p></div>
         </header>
     );
 }

@@ -4,20 +4,23 @@
     float: left;
 }
 .seat{
-    height: 18px;
-    width: 18px;
+    height: 19.5px;
+    width: 19.5px;
     border-radius: 50%;
     text-align: center;
     font-size: 13px;
 }
 .selected-seat{
-    background-color: rgb(141, 215, 207);
+    background-color: rgba(141, 215, 207, 0.6);
+    border: 2px solid rgb(141, 215, 207);
 }
 .available-seat{
-    background-color: rgb(195, 207, 217);
+    background-color: rgba(195, 207, 217, 0.5);
+    border: 2px solid rgb(195, 207, 217);
 }
 .unavailable-seat{
-    background-color: rgb(251, 225, 146);
+    background-color: rgba(251, 225, 146, 0.6);
+    border: 2px solid rgb(251, 225, 146);
 }
 .seats-subtitle{
     width: 100%;
@@ -25,14 +28,42 @@
     display: flex;
 }
 .seat-demo{
-    height: 18px;
-    width: 18px;
+    height: 19.5px;
+    width: 19.5px;
     border-radius: 50%;
     margin: auto;
 }
-.container-seats{
+.container-seats, .container-buyer-data{
     box-sizing: border-box;
-    width: 90%;
+    width: 95%;
     margin: auto;
     justify-content: space-around;
+}
+.container-buyer-data{
+    padding-top: 30px;
+}
+.subtitle-input{
+    font-weight: 600;
+}
+.input > input{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
+}
+.finalize-request{
+    padding-top: 40px;
+    margin: auto;
+    width: 170px;
+}
+.btn-finalize{
+    width: 100%;
+    margin: auto;
+    border: none;
+    border-radius: 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(232, 131, 58);
+    color: white;
 }

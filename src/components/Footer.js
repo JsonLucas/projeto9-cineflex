@@ -1,4 +1,4 @@
-function Footer({movieTitle, moviePoster}){
+function Footer({movieTitle, moviePoster, movieSession}){
     return (
         <footer className='footer'>
             <div className='container-sample-movie'>
@@ -8,8 +8,9 @@ function Footer({movieTitle, moviePoster}){
                             <img src={moviePoster} />
                         </div>
                     </div>
-                    <div className='sample-movie-title'>
+                    <div className='sample-movie-information'>
                         <div className='movie-title'>{movieTitle}</div>
+                        <div className='movie-session'>{movieSession}</div>
                     </div>
                 </div>
             </div>

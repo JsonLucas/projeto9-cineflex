@@ -50,4 +50,20 @@
 .sample-movie-information{
     box-sizing: border-box;
     padding: 10px;
+    font-weight: 700;
+}
+.hidden{
+    display: none;
+}
+@media screen and (max-width: 300px){
+    .position-absolute{
+        position: fixed;
+        top: 125vh;
+    }
+}
+@media screen and (min-width: 301px){
+    .position-absolute{
+        position: absolute;
+        top: 110vh;
+    }
 }

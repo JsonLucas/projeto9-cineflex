@@ -4,7 +4,6 @@ const GetMovieData = (url, setStateParam, loadParam) => {
     request.then((response) => {
         setStateParam(response.data);
         loadParam(true);
-        console.log(response.data);
     }).catch((error) => {
         console.log(error);
     });

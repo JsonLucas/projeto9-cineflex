@@ -12,7 +12,7 @@ function MovieShowtimes({movieData}){
                     </section>
                 </div>
             </section>
-            <Footer movieTitle={movieData.title} moviePoster={movieData.posterURL} />
+            <Footer movieTitle={movieData.title} moviePoster={movieData.posterURL} positionClass='' />
         </Fragment>
     );
 }

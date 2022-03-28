@@ -8,30 +8,37 @@ body{
 }
 a{
     text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: rgb(232, 131, 58);
 }
 button, .seat{
     cursor: pointer;
 }
 .header{
-    height: 50px;
+    height: 60px;
     width: 100%;
     background-color: rgb(195, 207, 217);
 }
 .name-header{
+    box-sizing: border-box;
     color: rgb(232, 131, 58);
+    font-weight: 900;
     font-size: 30px;
-    width: 140px;
-    padding-top: 10px;
+    width: 150px;
+    padding: 10px;
     margin: auto;
 }
 .subtitle{
-    width: 300px;
+    width: 90%;
     margin: auto;
     box-sizing: border-box;
+    padding: 40px;
 }
 .subtitle > p{
-    padding: 40px;
     font-size: 20px;
+    text-align: center;
 }
 .container-movies{
     width: 90%;
@@ -41,8 +48,8 @@ button, .seat{
 .single-movie{
     box-sizing: border-box;
     float: left;
-    width: 170px;
-    height: 300px;
+    width: 140px;
+    height: 270px;
     padding: 10px;
     margin-top: 10px;
     margin-right: 10px;

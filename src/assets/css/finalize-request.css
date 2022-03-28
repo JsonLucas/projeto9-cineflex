@@ -1,6 +1,5 @@
 .finalize-subtitle{
-    width: 280px;
-    margin: auto;
+    text-align: center;
     box-sizing: border-box;
 }
 .finalize-subtitle > p{
@@ -17,11 +16,12 @@
     padding-top: 20px;
 }
 .subtitle-ticket{
-    font-weight: bold;
+    font-weight: bolder;
 }
 .session-information{
     padding-top: 10px;
     padding-bottom: 10px;
+    font-weight: 500;
 }
 .back-home{
     margin: auto;

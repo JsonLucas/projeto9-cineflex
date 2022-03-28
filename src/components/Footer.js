@@ -1,6 +1,6 @@
-function Footer({movieTitle, moviePoster, movieSession}){
+function Footer({movieTitle, moviePoster, movieSession, positionClass}){
     return (
-        <footer className='footer'>
+        <footer className={`footer ${positionClass}`}>
             <div className='container-sample-movie'>
                 <div className='sample-single-movie'>
                     <div className='sample-movie-thumb'>

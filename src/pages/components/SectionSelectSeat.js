@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Footer from "../../components/Footer";
 import DataBuyer from "./DataBuyer";
+import PreviousPage from "./PreviousPage";
 import SingleSeat from "./SingleSeat";
 function SectionSelectSeat({seats}){
     const [selectedSeats, setSelectedSeat] = useState([]);
@@ -18,6 +19,7 @@ function SectionSelectSeat({seats}){
     if(stillAvailable(seats.seats) < seats.seats.length){
         return (
             <Fragment>
+                <PreviousPage />
                 <section className='section-select-seat'>
                     <div className='container-select-seat'>
                         <div className='row-subtitle'><div className='subtitle'><p>Selecione o(s) assento(s)</p></div></div>
